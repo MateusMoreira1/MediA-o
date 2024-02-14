@@ -1,0 +1,37 @@
+/* Estilo para o título centralizado */
+#titulo-centralizado {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px; /* Espaçamento inferior para separar o título do conteúdo */
+    display: flexbox;
+    justify-content: stretch;
+}
+
+/* Estilo para o contêiner centralizado */
+#container-titulos-descricoes {
+    width: 18%; /* Largura do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 0px;
+    display: flex; /* Ativa o flexbox */
+    justify-content: first baseline; /* Distribui os itens uniformemente ao longo do eixo principal */
+   /* align-items: center; /* Centraliza verticalmente os itens */
+    padding: 0px;
+}
+
+
+
+/* Estilo para os botões */
+button {
+    margin: 15px;
+    padding: 15px;
+    background-color: #66a8dd; /* Cor de fundo verde */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Estilo para os botões quando hover (quando o cursor passa por cima) */
+button:hover {
+    background-color: #388b3d; /* Cor de fundo verde mais escura */
+}

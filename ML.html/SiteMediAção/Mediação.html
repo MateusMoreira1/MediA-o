@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajuda.MediAção</title>
+<!-- Vinculando o arquivo CSS -->
+<link rel="stylesheet" href="MediAção.css">
+</head>
+<body>
+
+<!-- Título centralizado -->
+<h1 id="titulo-centralizado">Títulos e Descrições</h1>
+
+<!-- Div para exibir os títulos e descrições centralizada -->
+<div id="container-titulos-descricoes">
+    <div id="titulos-e-descricoes"></div>
+</div>
+
+<script>
+// Array de objetos contendo títulos e descrições
+var dados = [
+    { titulo: "Título 1", descricao: "Descrição do Título 1" },
+    { titulo: "Título 2", descricao: "Descrição do Título 2" },
+    { titulo: "Título 3", descricao: "Descrição do Título 3" },
+    { titulo: "Título 4", descricao: "Descrição do Título 4" },
+    { titulo: "Título 5", descricao: "Descrição do Título 5" },
+    { titulo: "Título 6", descricao: "Descrição do Título 6" },
+    { titulo: "Título 7", descricao: "Descrição do Título 7" },
+    { titulo: "Título 8", descricao: "Descrição do Título 8" },
+    { titulo: "Título 9", descricao: "Descrição do Título 9" },
+    { titulo: "Título 10", descricao: "Descrição do Título 10" }
+];
+
+// Função para criar os botões e adicionar ao HTML
+function criarBotoesEDescrições() {
+    var container = document.getElementById("titulos-e-descricoes");
+    for (var i = 0; i < dados.length; i++) {
+        var titulo = dados[i].titulo;
+        var descricao = dados[i].descricao;
+
+        // Criar um botão para cada título
+        var botao = document.createElement("button");
+        botao.textContent = titulo;
+
+        // Adicionar um evento de clique para exibir a descrição correspondente
+        botao.addEventListener("click", function(desc) {
+            return function() {
+                // Verificar se a descrição já está sendo exibida
+                var descricaoAtual = document.querySelector(".descricao");
+                if (descricaoAtual) {
+                    descricaoAtual.parentNode.removeChild(descricaoAtual);
+                }
+
+                // Criar um parágrafo para exibir a descrição
+                var descricaoElement = document.createElement("p");
+                descricaoElement.textContent = "Descrição: " + desc;
+                descricaoElement.classList.add("descricao");
+
+                // Adicionar a descrição após o botão clicado
+                this.parentNode.insertBefore(descricaoElement, this.nextSibling);
+            };
+        }(descricao)); // Utilizando um closure para garantir que a descrição correta seja passada ao evento de clique
+
+        // Adicionar o botão ao contêiner
+        container.appendChild(botao);
+        container.appendChild(document.createElement("br")); // Adicionar uma quebra de linha
+    }
+}
+
+// Chamar a função para criar os botões e descrições
+criarBotoesEDescrições();
+</script>
+
+</body>
+</html>
