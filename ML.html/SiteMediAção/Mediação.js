@@ -64,7 +64,7 @@ function criarBotoesEDescrições() {
 
                 // Criar um parágrafo para exibir a descrição
                 var descricaoElement = document.createElement("p");
-                descricaoElement.innerHTML = "Descrição: " + desc;
+                descricaoElement.innerHTML = "" + desc;
                 descricaoElement.classList.add("descricao");
 
                 // Adicionar a descrição após o botão clicado
