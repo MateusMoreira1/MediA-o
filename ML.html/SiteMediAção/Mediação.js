@@ -41,6 +41,7 @@ function criarBotoesEDescrições() {
                 this.parentNode.insertBefore(descricaoElement, this.nextSibling);
             };
         }(descricao)); // Utilizando um closure para garantir que a descrição correta seja passada ao evento de clique
+        
 
         // Adicionar o botão ao contêiner
         container.appendChild(botao);

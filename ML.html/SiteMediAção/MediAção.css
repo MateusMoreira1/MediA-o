@@ -1,34 +1,57 @@
+body {
+    background-image: url('background3.jpg'); /* Caminho da imagem de fundo */
+    background-size: cover; /* Garante que a imagem cubra toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetir a imagem */
+    margin: 0; /* Remove margens padrão do corpo */
+    padding: 0; /* Remove padding padrão do corpo */
+}
+header {
+    text-align: center;
+    padding: 20px 0; /* Espaçamento interno superior e inferior */
+}
 /* Estilo para o título centralizado */
 #titulo-centralizado {
     text-align: center;
     font-size: 50px;
     margin-bottom: 20px; /* Espaçamento inferior para separar o título do conteúdo */
-    display: flexbox;
-    justify-content: stretch;
+    font-family: 'Arial Black', sans-serif; /* Usando uma fonte mais chamativa */
+    font-weight: bold; /* Deixa a fonte mais pesada, para ficar mais destacada */
+    color: #08145e; /* Cor do texto */
 }
 
 /* Estilo para o contêiner centralizado */
 #container-titulos-descricoes {
-    width: 18%; /* Largura do contêiner */
+    background-image: 'i';
+    width: 80%; /* Largura do contêiner ajustada para 80% */
     margin: 0 auto; /* Centraliza o contêiner horizontalmente */
     padding: 0px;
     display: flex; /* Ativa o flexbox */
-    justify-content: first baseline; /* Distribui os itens uniformemente ao longo do eixo principal */
-   /* align-items: center; /* Centraliza verticalmente os itens */
-    padding: 0px;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: wrap; /* Quebra a linha quando não couberem mais botões horizontalmente */
+    text-align: center; /* Centraliza o texto */
 }
-
-
 
 /* Estilo para os botões */
 button {
     margin: 15px;
-    padding: 15px;
+    padding: 20px 150px; /* Ajuste a propriedade padding para aumentar a largura dos botões */
     background-color: #66a8dd; /* Cor de fundo verde */
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 10px;
+    display: inline-block; /* Exibe os botões em linha */
+}
+button:hover {
+    background-color: #47a7d4;
+}
+#footer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: #333;
 }
 
 /* Estilo para os botões quando hover (quando o cursor passa por cima) */
